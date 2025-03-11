@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="container"></div>
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameFeild"> 
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field"> 
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="email">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field"> 
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="password">
+                </div>
+                <p>Lost Password <a href="#">Click Here!</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button"id="signupBtn">Sign Up</button>
+                <button type="button"id="signinBtn" class="disable">Sign in</button>
+            </div>
+        </form>
+    </div>
+
+<script>
+   
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameFeild = document.getElementById("nameFeild");
+let title = document.getElementById("title");
+
+signinBtn.onclick = function(){
+     nameFeild.style.maxHeight = "0";
+     title.innerHTML = "Sign In";
+     signupBtn.classList.add("disable");
+     signinBtn.classList.remove("disable");
+}
+signupBtn.onclick = function(){
+     nameFeild.style.maxHeight = "60px";
+     title.innerHTML = "Sign Up";
+     signupBtn.classList.remove("disable");
+     signinBtn.classList.add("disable");
+}
+
+</script>
+</body>
+</html>
